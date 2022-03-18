@@ -34,10 +34,10 @@ resource "azurerm_virtual_machine" "bastion" {
   delete_os_disk_on_termination = "true"
 
   storage_image_reference {
-    publisher = var.image_publisher
-    offer     = var.image_offer
-    sku       = var.image_sku
-    version   = var.image_version
+    publisher = "OpenLogic"
+    offer     = "CentOS"
+    sku       = "7.5"
+    version   = "latest"
   }
 
   storage_os_disk {
