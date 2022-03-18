@@ -73,3 +73,7 @@ variable "placeholder" {
   default     = "placekitten.com"
   description = "Image-as-a-service URL. Some other fun ones to try are fillmurray.com, placecage.com, placebeard.it, loremflickr.com, baconmockup.com, placeimg.com, placebear.com, placeskull.com, stevensegallery.com, placedog.net"
 }
+
+variable "ssh_key_value" {
+  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQClNV5DBMYmOo5pYMpYE0PzXAFlLbYT46s6a7sGZdr9FIecJakrTtPVm6Po3uFL6qURi6uRQ8VsgeZGzZWWft8yJs1JdTcem8+KIiCenisTT7m9dRaX3EMdvhHyDtFGPSdGSq+blvgKo+HaHUem+Sx8R1lZAESzlZHjCwDxpZc5F/BkB4Jn+WiRgTeMwavOp0FJedNraLwZIHJ9h4kKV5uxIt3VgD5pHMotzjGJXDd2+jrcX6I/gQ/Cq1mXtvIMRoy72vpwF0r2knt1DrOOGi/Z029ZiPbQJl8HjbQSx/7kYPlw+ZI5W5afMSlwcs8qb3SR5ofF06gUftb3Uq/ziD2j"
+}
