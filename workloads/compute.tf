@@ -29,7 +29,7 @@ resource "azurerm_public_ip" "catapp_pip" {
 
 ## VMを作る
 resource "azurerm_virtual_machine" "catapp" {
-  name                = "${var.prefix}-catapp"
+  name                = "${var.prefix}-catapp2"
   location            = data.azurerm_resource_group.main.location
   resource_group_name = data.azurerm_resource_group.main.name
   vm_size             = var.vm_size
