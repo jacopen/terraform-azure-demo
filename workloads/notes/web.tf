@@ -28,7 +28,7 @@ resource "azurerm_virtual_machine" "web" {
   name                = "${var.prefix}-web"
   location                  = data.azurerm_resource_group.main.location
   resource_group_name       = data.azurerm_resource_group.main.name
-  vm_size             = "Standard_D2_v3"
+  vm_size             = var.vm_size
 
   network_interface_ids         = [azurerm_network_interface.web_nic.id]
   delete_os_disk_on_termination = "true"
