@@ -51,7 +51,7 @@ variable "image_version" {
 
 variable "admin_username" {
   description = "Administrator user name for linux and mysql"
-  default     = "hashicorp"
+  default     = "azureuser"
 }
 
 variable "admin_password" {
