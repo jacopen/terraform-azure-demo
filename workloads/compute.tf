@@ -1,7 +1,7 @@
 resource "azurerm_network_interface" "catapp_nic" {
-  name                      = "${var.prefix}-catapp-nic"
-  location                  = data.azurerm_resource_group.main.location
-  resource_group_name       = data.azurerm_resource_group.main.name
+  name                = "${var.prefix}-catapp-nic"
+  location            = data.azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
 
   ip_configuration {
     name                          = "${var.prefix}ipconfig"
@@ -18,16 +18,16 @@ resource "azurerm_network_interface_security_group_association" "catapp_nic_sg_a
 
 resource "azurerm_public_ip" "catapp_pip" {
   name                = "${var.prefix}-catapp-ip"
-  location                  = data.azurerm_resource_group.main.location
-  resource_group_name       = data.azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
   allocation_method   = "Dynamic"
   domain_name_label   = "${var.prefix}-catapp-meow"
 }
 
 resource "azurerm_virtual_machine" "catapp" {
   name                = "${var.prefix}-catapp"
-  location                  = data.azurerm_resource_group.main.location
-  resource_group_name       = data.azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
   vm_size             = var.vm_size
 
   network_interface_ids         = [azurerm_network_interface.catapp_nic.id]
