@@ -33,6 +33,13 @@ module "network" {
   depends_on = [azurerm_resource_group.main]
 }
 
+resource "azurerm_user_assigned_identity" "k8saas" {
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+
+  name = "k8saas"
+}
+
 output "resource_group_name" {
   value = azurerm_resource_group.main.name
 }
@@ -43,4 +50,8 @@ output "vnet_id" {
 
 output "vnet_subnet_id" {
   value = module.network.vnet_subnets[0]
+}
+
+output "k8saas_user_assigned_identity_id" {
+  value = azurerm_user_assigned_identity.k8saas.id
 }
